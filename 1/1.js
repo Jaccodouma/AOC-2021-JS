@@ -10,7 +10,7 @@ export default function solve() {
   let data = getData();
 
   let count = 0; 
-  let lastNumber = parseInt(data[0]);
+  let lastNumber = data[0];
 
   for (let number of data) {
     if (number > lastNumber) {
