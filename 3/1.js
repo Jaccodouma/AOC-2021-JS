@@ -21,7 +21,7 @@ export default function solve() {
   // assemble gamma & epsilon rates by simply checking if the count is over the length of the data 
   // array, placing a '0' or '1' and joining the array then parsing this as an int with base 2 (binary)
   let gammaRate = parseInt(Object.values(count).map(count => (count > data.length/2) ? '1' : '0').join(''),2);
-  let epsilonRate = parseInt(Object.values(count).map(count => (count > data.length/2) ? '0' : '1').join(''),2);;
+  let epsilonRate = parseInt(Object.values(count).map(count => (count > data.length/2) ? '0' : '1').join(''),2);
 
   console.log(gammaRate * epsilonRate);
 };
