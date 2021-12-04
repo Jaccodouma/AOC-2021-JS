@@ -4,7 +4,8 @@ async function run() {
   // Discover all folders
   let days = fs.readdirSync('./', { withFileTypes: true })
     .filter(dir => dir.isDirectory() && !isNaN(dir.name))
-    .map(dir => dir.name);
+    .map(dir => dir.name)
+    .sort((e1, e2) => parseInt(e1) - parseInt(e2));
 
   // Check for js files 
   for await (const day of days) {
