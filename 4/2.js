@@ -79,6 +79,8 @@ function rotate2DArray(array) {
   return array[0].map((val, index) => array.map(row => row[index]).reverse())
 }
 
+// Have a global var that keeps getting updated every time we find a new bingo board. 
+// This is gross tbh, but easy
 let losingBoard = {};
 
 export default function solve() {
