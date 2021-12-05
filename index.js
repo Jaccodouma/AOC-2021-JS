@@ -12,10 +12,15 @@ async function run() {
     let objs = fs.readdirSync(`./${day}`, { withFileTypes: true }).filter(dir => dir.name.split('.')[1] == 'js').map(dir => dir.name.split('.')[0]);
 
     for await (const obj of objs) {
-      console.log(`Day ${day}.${obj}`);
-
+      
       const fn = await import(`./${day}/${obj}.js`);
-      fn.default();
+
+      let t = process.hrtime();
+      const answer = fn.default();
+      t = process.hrtime(t);
+
+      console.log(`Day ${day}.${obj} (${(t[1]/1000000).toFixed(2)}ms)`);
+      console.log(answer);
       console.log();
     }
   };

@@ -39,5 +39,5 @@ export default function solve() {
     }
   });
 
-  console.log(position * depth);
+  return (position * depth);
 };

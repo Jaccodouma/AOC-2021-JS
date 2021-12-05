@@ -50,5 +50,5 @@ export default function solve() {
   let oxygenRating = parseInt(findOxygenRating(data), 2);
   let scrubberRating = parseInt(findScrubberRating(data), 2);
 
-  console.log(oxygenRating * scrubberRating);
+  return (oxygenRating * scrubberRating);
 };

@@ -92,5 +92,5 @@ export default function solve() {
     drawNumber(drawnNumber, boards);
   }
 
-  console.log(losingBoard);
+  return (losingBoard);
 };

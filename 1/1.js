@@ -19,5 +19,5 @@ export default function solve() {
     lastNumber = number;
   }
 
-  console.log(count);
+  return count; 
 };

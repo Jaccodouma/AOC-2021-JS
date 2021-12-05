@@ -20,5 +20,5 @@ export default function solve() {
     }
   }
 
-  console.log(count);
+  return count; 
 };

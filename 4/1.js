@@ -36,7 +36,7 @@ function drawNumber(drawnNumber, boards) {
     }
 
     if (hasBingo(drawn)) {
-      console.log(findAnswer(board, drawn, drawnNumber))
+      answer = (findAnswer(board, drawn, drawnNumber))
       return true;
     }
   }
@@ -78,11 +78,13 @@ function rotate2DArray(array) {
   return array[0].map((val, index) => array.map(row => row[index]).reverse())
 }
 
+let answer = 0; 
+
 export default function solve() {
   let { numbers, boards } = getData();
 
   for (const index in numbers) {
     const drawnNumber = numbers[index];
-    if (drawNumber(drawnNumber, boards)) return;
+    if (drawNumber(drawnNumber, boards)) return answer;
   }
 };

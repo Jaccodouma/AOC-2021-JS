@@ -23,5 +23,5 @@ export default function solve() {
   let gammaRate = parseInt(Object.values(count).map(count => (count > data.length/2) ? '1' : '0').join(''),2);
   let epsilonRate = parseInt(Object.values(count).map(count => (count > data.length/2) ? '0' : '1').join(''),2);
 
-  console.log(gammaRate * epsilonRate);
+  return (gammaRate * epsilonRate);
 };
