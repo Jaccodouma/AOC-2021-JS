@@ -18,7 +18,7 @@ function simulateStep(data) {
       newData['6'] = newData['6'] ? newData['6'] + value : value;
       newData['8'] = value;
     } else {
-      newData[parseInt(key) - 1] = newData[parseInt(key) - 1] ? newData[parseInt(key) - 1] + value : value;
+      newData[key - 1] = newData[key - 1] ? newData[key - 1] + value : value;
     }
   }
 
