@@ -1,5 +1,7 @@
 import fs from 'fs';
 
+let currentDay = ''; 
+
 async function run() {
   // Discover all folders
   let days = fs.readdirSync('./', { withFileTypes: true })
@@ -10,6 +12,8 @@ async function run() {
   // Check for js files 
   for await (const day of days) {
     let objs = fs.readdirSync(`./${day}`, { withFileTypes: true }).filter(dir => dir.name.split('.')[1] == 'js').map(dir => dir.name.split('.')[0]);
+
+    if (currentDay && day != currentDay) continue; 
 
     for await (const obj of objs) {
       
