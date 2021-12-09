@@ -16,7 +16,7 @@ export default function solve() {
 
   for (const { signal, output } of data) {
     for (const str of output) {
-      if ([2, 4, 3, 7].includes(str.length)) count++
+      if ([2, 4, 3, 7].includes(str.length)) count++;
     }
   }
 
