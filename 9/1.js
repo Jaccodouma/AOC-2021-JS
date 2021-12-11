@@ -13,7 +13,7 @@ function getRiskLevel(data, x, y) {
   const checkBtm = y < data.length - 1;
 
   const CheckLft = x > 0;
-  const CheckRgt = x < data[y].length;
+  const CheckRgt = x < data[y].length - 1;
 
   // Adjacent positions (tl = top left etc.)
   const top = (checkTop) ? parseInt(data[y - 1][x]) : Number.MAX_VALUE;
