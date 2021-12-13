@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-let currentDay = '12'; 
+let currentDay = '13'; 
 
 async function run() {
   // Discover all folders
