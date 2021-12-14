@@ -1,8 +1,17 @@
 import fs from 'fs';
 
-let currentDay = '14'; 
+/**
+ * To run: 
+ *  `node index`
+ * To run a specific day: 
+ *  `node index <day>`
+ * To run nodemon on a specific day: 
+ *  `nodemon index.js <day>`
+ */
 
 async function run() {
+  let currentDay = process.argv[2];
+
   // Discover all folders
   let days = fs.readdirSync('./', { withFileTypes: true })
     .filter(dir => dir.isDirectory() && !isNaN(dir.name))
